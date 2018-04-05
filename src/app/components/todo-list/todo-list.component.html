@@ -1,0 +1,23 @@
+<div class="todo-list">
+    <ul>
+
+        <todo-item *ngFor="let item of store.items"
+                   [item]="item"
+                   (done)="removeItem($event)">
+        </todo-item>
+
+        <div class="all-done" *ngIf="store.isEmpty">
+            Need to add something?
+        </div>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
